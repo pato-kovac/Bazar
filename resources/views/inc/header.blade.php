@@ -1,71 +1,87 @@
-<link rel="stylesheet" href="/resources/css/variables.css">
+<link rel="stylesheet" href="{{ asset('css/variables.css') }}">
 
-<head>
-    <link rel="stylesheet" href="{{ asset('css/variables.css') }}">
-</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: var(--white);
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        background: var(--subtle-white);
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .search-bar input {
+        border: none;
+        background: var(--subtle-white);
+        flex: 1;
+        outline: none;
+        height: 31px;
+        padding: 0 10px;
+        font-size: 12.9px;
+        color: var(--gray);
+        border-radius: 4px 0 0 4px;
+    }
+    .search-bar button {
+        width: 55px;
+        height: 31px;
+        background: var(--primary-blue);
+        border: none;
+        color: var(--white);
+        cursor: pointer;
+        border-radius: 0 4px 4px 0;
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+    .user {
+        text-decoration: none;
+        color: var(--dark-gray);
+        margin: 0 10px 0 20px;
+    }
+    .cart-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+    }
+    .cart-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: var(--yellow);
+        border-radius: 10px;
+        padding: 2px 5px;
+        font-size: 11px;
+        color: var(--dark-gray);
+    }
+    .cart {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+</style>
 
-
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bajoš</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background: white;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .search-bar {
-            display: flex;
-            align-items: center;
-            width: 50%;
-            background: #f5f5f5;
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .search-bar input {
-            border: none;
-            background: transparent;
-            flex: 1;
-            outline: none;
-        }
-        .search-bar button {
-            background: #0098ff;
-            border: none;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .menu {
-            display: flex;
-            align-items: center;
-        }
-        .cart, .user {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
 <body>
-
     <div class="navbar">
         <div class="logo">
             <a href="#">
@@ -81,34 +97,30 @@
         </div>
 
         <div class="search-bar">
-            <input type="text" placeholder="Hľadajte produkt, kategóriu alebo značku" style="height: 31px; background: #F6F6F6; border-radius: 4px 0 0 4px; padding: 0 10px; font-size: 12.9px; color: #898989; border: none;">
-            <button style="width: 55px; height: 31px; background: #009ADC; border-radius: 0 4px 4px 0; border: none; cursor: pointer;">
+            <input type="text" placeholder="Hľadajte produkt, kategóriu alebo značku">
+            <button>
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3.73932 7.55071C3.73932 6.20137 4.11532 5.28137 4.69932 4.69871C5.28198 4.11471 6.20265 3.73871 7.55132 3.73871C8.90065 3.73871 9.81998 4.11471 10.404 4.69871C10.9867 5.28137 11.3633 6.20204 11.3633 7.55071C11.3633 8.90004 10.9867 9.81937 10.404 10.4034C9.81998 10.986 8.90065 11.3627 7.55065 11.3627C6.20265 11.3627 5.28198 10.986 4.69932 10.4034C4.11532 9.81937 3.73932 8.90004 3.73932 7.55004V7.55071ZM7.55132 1.83337C5.85132 1.83337 4.38865 2.31471 3.35132 3.35071C2.31532 4.38804 1.83398 5.85071 1.83398 7.55137C1.83398 9.25137 2.31532 10.714 3.35132 11.75C4.38865 12.7867 5.85132 13.2674 7.55198 13.2674C8.87798 13.2674 10.0587 12.9754 11.0067 12.3534L13.52 14.866C13.6986 15.0446 13.9408 15.1449 14.1933 15.1449C14.4459 15.1449 14.6881 15.0446 14.8667 14.866C15.0452 14.6875 15.1456 14.4453 15.1456 14.1927C15.1456 13.9402 15.0452 13.698 14.8667 13.5194L12.354 11.0067C12.9753 10.058 13.2687 8.87671 13.2687 7.55004C13.2687 5.85004 12.7867 4.38737 11.75 3.35004C10.714 2.31471 9.25132 1.83337 7.55065 1.83337H7.55132Z" fill="white"/>
-                </svg>
+                </svg> 
             </button>
         </div>
 
         <div class="menu">
-            <div style="position: relative; width: 36px; height: 18px;">
+            <div class="cart-container">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.79074 19.579C8.21508 19.597 8.62921 19.4457 8.94203 19.1584C9.25484 18.8711 9.4407 18.4713 9.45874 18.047C9.47677 17.6226 9.3255 17.2085 9.03819 16.8957C8.75089 16.5829 8.35108 16.397 7.92674 16.379C7.50239 16.3611 7.08831 16.5125 6.7756 16.7999C6.46288 17.0873 6.27714 17.4871 6.25924 17.9115C6.24134 18.3358 6.39274 18.7499 6.68014 19.0626C6.96754 19.3753 7.36739 19.5611 7.79174 19.579H7.79074ZM17.2877 19.579C17.4979 19.5879 17.7077 19.5552 17.9052 19.483C18.1027 19.4108 18.284 19.3004 18.4389 19.1581C18.5937 19.0158 18.719 18.8444 18.8076 18.6536C18.8962 18.4629 18.9464 18.2566 18.9552 18.0465C18.9641 17.8364 18.9315 17.6266 18.8593 17.4291C18.7871 17.2315 18.6766 17.0502 18.5343 16.8953C18.392 16.7405 18.2206 16.6152 18.0299 16.5266C17.8392 16.438 17.6329 16.3879 17.4227 16.379C16.9984 16.3611 16.5843 16.5125 16.2716 16.7999C15.9589 17.0873 15.7731 17.4871 15.7552 17.9115C15.7373 18.3358 15.8887 18.7499 16.1761 19.0626C16.4635 19.3753 16.8634 19.5611 17.2877 19.579Z" fill="#009ADC"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.11776 3.94306C4.04984 3.52442 3.83517 3.14362 3.51215 2.86879C3.18914 2.59396 2.77886 2.44305 2.35476 2.44306H1.57276C1.42929 2.44744 1.2864 2.42297 1.15257 2.3711C1.01874 2.31922 0.896694 2.241 0.793663 2.14107C0.690632 2.04114 0.608718 1.92153 0.55278 1.78935C0.496841 1.65716 0.468018 1.51509 0.468018 1.37156C0.468018 1.22803 0.496841 1.08596 0.55278 0.953773C0.608718 0.82159 0.690632 0.701986 0.793663 0.602055C0.896694 0.502124 1.01874 0.423901 1.15257 0.372025C1.2864 0.320149 1.42929 0.295677 1.57276 0.300061H2.35476C3.20989 0.300045 4.04169 0.579019 4.72389 1.09464C5.40608 1.61026 5.90144 2.33437 6.13476 3.15706H18.3218C19.1108 3.15706 19.7568 3.79906 19.6878 4.58506C19.5448 6.24707 19.1576 7.87894 18.5388 9.42806C18.3715 9.84241 18.1038 10.2086 17.7597 10.4937C17.4156 10.7788 17.006 10.9738 16.5678 11.0611C15.6338 11.2521 14.2078 11.4471 12.2658 11.4471C10.8748 11.4471 9.70375 11.3471 8.77575 11.2191C8.27483 11.1522 7.797 10.9671 7.38175 10.6791L7.59875 12.0151C7.66667 12.4337 7.88134 12.8145 8.20436 13.0893C8.52737 13.3642 8.93765 13.5151 9.36176 13.5151H17.2878C17.5719 13.5151 17.8445 13.628 18.0454 13.8289C18.2464 14.0298 18.3593 14.3024 18.3593 14.5866C18.3593 14.8707 18.2464 15.1433 18.0454 15.3442C17.8445 15.5452 17.5719 15.6581 17.2878 15.6581H9.36176C8.42841 15.6587 7.52534 15.3269 6.81437 14.7222C6.1034 14.1175 5.63098 13.2794 5.48176 12.3581L4.11776 3.94306ZM10.1228 5.69306C9.88592 5.69306 9.65878 5.78714 9.49131 5.95461C9.32384 6.12208 9.22976 6.34922 9.22976 6.58606V7.73006C9.22976 7.9669 9.32384 8.19404 9.49131 8.36151C9.65878 8.52898 9.88592 8.62306 10.1228 8.62306C10.3596 8.62306 10.5867 8.52898 10.7542 8.36151C10.9217 8.19404 11.0158 7.9669 11.0158 7.73006V6.58606C11.0158 6.46879 10.9927 6.35267 10.9478 6.24432C10.9029 6.13598 10.8371 6.03754 10.7542 5.95461C10.6713 5.87169 10.5728 5.80591 10.4645 5.76104C10.3561 5.71616 10.24 5.69306 10.1228 5.69306ZM14.0788 5.95506C14.2036 5.83035 14.3627 5.74545 14.5358 5.71106C14.7089 5.67668 14.8883 5.69436 15.0514 5.76188C15.2144 5.82939 15.3538 5.94371 15.452 6.0904C15.5501 6.23709 15.6026 6.40957 15.6028 6.58606V7.73006C15.595 7.9616 15.4976 8.18106 15.331 8.3421C15.1645 8.50315 14.9419 8.59318 14.7103 8.59318C14.4786 8.59318 14.256 8.50315 14.0895 8.3421C13.9229 8.18106 13.8255 7.9616 13.8178 7.73006V6.58606C13.8178 6.34906 13.9118 6.12206 14.0788 5.95506Z" fill="#009ADC"/>
-                </svg>                               
-                <div style="position: absolute; top: 0; right: 5px; background: #FFCE3C; border-radius: 10px; padding: 2px 5px; font-size: 11px; color: black;">
-                    0
-                </div>
+                </svg>
+                <div class="cart-badge">0</div>
+                <p class="cart">0,00 €</p>
             </div>
-            <p class="cart"> 0,00 €</p>
-            <a href="" class="user" style="text-decoration:none; color:black; margin:0px 20px 0px 20px;">
+            <a href="#" class="user">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M8.39575 10.7435C5.92074 10.8626 3.52 11.6537 1.45291 13.0351C0.902912 13.4018 0.538078 13.8876 0.380411 14.434C0.230707 14.9608 0.272605 15.5237 0.498661 16.0225C0.929495 16.997 1.97541 17.712 3.27433 17.712H14.8912C16.1902 17.712 17.237 16.997 17.6678 16.0225C17.8832 15.534 17.9428 14.9775 17.7852 14.4358C17.6284 13.8885 17.2617 13.4027 16.7117 13.0342C14.4539 11.5252 11.7981 10.722 9.08233 10.727C8.85316 10.727 8.62399 10.7325 8.39483 10.7435H8.39575ZM9.08233 9.21263H9.08508C9.30875 9.21263 9.52508 9.20163 9.73316 9.18238C12.1797 8.95138 13.5428 7.38204 13.5428 4.75213C13.5428 1.89671 11.9368 0.291626 9.08233 0.291626C6.22783 0.291626 4.62183 1.89579 4.62183 4.75213C4.62183 7.38113 5.98308 8.94954 8.42599 9.18146C8.63683 9.20163 8.85591 9.21171 9.08233 9.21171V9.21263ZM1.87916 14.863C1.83105 15.0346 1.845 15.2176 1.91858 15.38L1.92133 15.3864L1.92408 15.3928C2.08908 15.7668 2.55291 16.1536 3.27433 16.1536H14.8912C15.6127 16.1536 16.0765 15.7668 16.2424 15.3928C16.3196 15.2294 16.3359 15.0437 16.2882 14.8694V14.8657C16.2452 14.7172 16.1306 14.5201 15.8455 14.3304C13.8437 12.9935 11.4895 12.2819 9.08233 12.2862H9.07958C6.67326 12.2821 4.32007 12.9937 2.31916 14.3304C2.03774 14.5183 1.92224 14.7135 1.87916 14.863ZM11.2814 6.95029C11.6682 6.56346 11.9845 5.89246 11.9845 4.75213C11.9845 3.61088 11.6682 2.93988 11.2814 2.55304C10.8937 2.16621 10.2227 1.84996 9.08233 1.84996C7.94108 1.84996 7.271 2.16529 6.88324 2.55304C6.49641 2.93988 6.18016 3.60996 6.18016 4.75213C6.18016 5.89338 6.49641 6.56346 6.88324 6.95121C7.271 7.33804 7.94108 7.65338 9.08233 7.65338C10.2227 7.65338 10.8937 7.33804 11.2814 6.95029Z" fill="#009ADC"/>
                 </svg>
                 <p>Prihlásiť sa</p>
             </a>
-            <a href="" class="user" style="text-decoration:none; color:black;  margin:0px 10px 0px 20px;">Registrovať sa</a>
+            <a href="#" class="user">Registrovať sa</a>
         </div>
     </div>
-
 </body>
-</html>

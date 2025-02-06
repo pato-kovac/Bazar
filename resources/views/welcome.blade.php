@@ -15,6 +15,7 @@
         @include('inc.product-card')
 
         @include('inc.category-card')
+        @include('inc.footer')
     </header>
 </body>
 </html>

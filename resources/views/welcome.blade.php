@@ -8,13 +8,14 @@
 
     <link rel="stylesheet" href="{{ asset('css/variables.css') }}">
 </head>
-<body>
+<body style="padding: 20px 40px;">
     <header>
         @include('inc.header')
 
         @include('inc.product-card')
 
-        @include('inc.category-card')
+        @include('inc.product-container')
+
         @include('inc.footer')
     </header>
 </body>

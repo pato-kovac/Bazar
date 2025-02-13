@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+
         .card-1 {
             font-family: Arial, Helvetica, sans-serif;
             color: black;
@@ -23,7 +24,12 @@
             display: flex;
             justify-content: space-around;
         }
-
+        p{
+            margin: 0;
+        }
+        h3{
+            margin: 0;
+        }
 
 
     </style>
@@ -63,7 +69,7 @@
 
     <div class="main-container">
         <div class="card-2">
-            <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg" style="padding-right: 20px;">
+            <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg" ">
                 <rect y="0.379883" width="34" height="34" rx="17" fill="#009ADC"/>
                 <g clip-path="url(#clip0_151_438)">
                 <g clip-path="url(#clip1_151_438)">

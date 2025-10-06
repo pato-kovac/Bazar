@@ -19,15 +19,14 @@
     }
 
     .product-container {
-        display: flex;
+        flex: none;
         overflow-x:hidden;
         max-width: 1440px;
         margin: 0 auto;
         padding-bottom: 10px;
         gap: 10px;
+        flex-grow: 0;
     }
-
-
 </style>
 <body>
 

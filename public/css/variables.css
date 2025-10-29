@@ -1,5 +1,6 @@
 :root {
     --primary-blue: #009ADC;
+    --dark-blue: #007AA3;
     --light-blue: #B6D6E4;
     --subtle-white: #F6F6F6;
     --white:  #FFFFFF;
@@ -8,4 +9,28 @@
     --dark-gray: #222020;
     --yellow: #FFCE3C;
     --red: #C20019;
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+.color-primary {
+    color: var(--primary-blue) !important;
+}
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+.btn-primary {
+    background-color: var(--primary-blue);
+}
+
+.color-primary:hover {
+    color: var(--dark-blue) !important;
+    fill: var(--dark-blue) !important;
+}
+.bg-primary:hover {
+    background-color: var(--dark-blue) !important;
+}
+.btn-primary:hover {
+    background-color: var(--dark-blue);
 }

@@ -6,26 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-
         .card-1 {
             font-family: Arial, Helvetica, sans-serif;
             color: var(--dark-gray);
             margin-right: 200px;
             
-
-            }
-            .bottom-text{
-                color: var(--gray);
-                background-color: #a5cddf;
-                padding-bottom: 50px;
-                padding-left: 50px;
-            }
-
+        }
+        .bottom-text{
+            color: var(--gray);
+            background-color: #a5cddf;
+            padding-bottom: 50px;
+            padding-left: 50px;
+        }
         .card-2{
             display: flex;
             padding: 0,30px,0,0;
         }
-
         .main-container {
             display: flex;
             justify-content: left;

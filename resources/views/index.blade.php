@@ -17,7 +17,7 @@
           <p class="text-secondary fs-5 mb-4">
             Stiahnite si našu novú aplikáciu a nikdy nezmeškáte výhodnú ponuku.
           </p>
-          <a href="#" class="btn btn-primary px-4 py-2">Stiahnuť aplikáciu</a>
+          <a href="https://play.google.com/store/apps/details?id=cz.ackee.bazos" class="btn btn-primary px-4 py-2">Stiahnuť aplikáciu</a>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center">
           <img src="{{ asset('img/LogoPhone-left.png') }}" alt="Logo" 

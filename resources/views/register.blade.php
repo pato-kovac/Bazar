@@ -27,32 +27,38 @@
           <p class="text-secondary">Vytvorte si nový účet a začnite predávať!</p>
         </div>
 
-        <form method="POST" action="#">
-          @csrf
-          <div class="mb-3">
-            <label for="name" class="form-label fw-semibold">Meno</label>
-            <input type="text" id="name" name="name" class="form-control rounded-3" placeholder="Ján Novák" required autofocus>
-          </div>
+<form method="POST" action="{{ route('register.store') }}">
+  @csrf
+  <div class="mb-3">
+    <label for="name" class="form-label fw-semibold">Meno</label>
+    <input type="text" id="name" name="name" class="form-control rounded-3" placeholder="Ján Novák" required>
+  </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label fw-semibold">E-mailová adresa</label>
-            <input type="email" id="email" name="email" class="form-control rounded-3" placeholder="napr. jan@bajos.sk" required>
-          </div>
+  <div class="mb-3">
+    <label for="email" class="form-label fw-semibold">E-mailová adresa</label>
+    <input type="email" id="email" name="email" class="form-control rounded-3" placeholder="jan@bajos.sk" required>
+  </div>
 
-          <div class="mb-3">
-            <label for="password" class="form-label fw-semibold">Heslo</label>
-            <input type="password" id="password" name="password" class="form-control rounded-3" placeholder="********" required>
-          </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label fw-semibold">Telefónne číslo</label>
+    <input type="tel" id="phone" name="phone" class="form-control rounded-3" placeholder="+421 947 903 603" required>
+  </div>
 
-          <div class="mb-4">
-            <label for="password_confirmation" class="form-label fw-semibold">Potvrdenie hesla</label>
-            <input type="password" id="password_confirmation" name="password_confirmation" class="form-control rounded-3" placeholder="********" required>
-          </div>
+  <div class="mb-3">
+    <label for="password" class="form-label fw-semibold">Heslo</label>
+    <input type="password" id="password" name="password" class="form-control rounded-3" required>
+  </div>
 
-          <button type="submit" class="btn btn-primary w-100 py-2 rounded-3 fw-semibold">
-            Registrovať sa
-          </button>
-        </form>
+  <div class="mb-4">
+    <label for="password_confirmation" class="form-label fw-semibold">Potvrdenie hesla</label>
+    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control rounded-3" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary w-100 py-2 rounded-3 fw-semibold">
+    Registrovať sa
+  </button>
+</form>
+
 
         <div class="text-center mt-4">
           <p class="text-secondary mb-1">Už máte účet?</p>

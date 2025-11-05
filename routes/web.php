@@ -13,3 +13,7 @@ Route::get('/prihlasenie', function () {
 Route::get('/registracia', function () {
     return view('register');
 })->name('register');
+
+Route::get('/kosik', function () {
+    return view('cart');
+})->name('cart');

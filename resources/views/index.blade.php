@@ -64,7 +64,7 @@
     <hr class="mb-4">
     <div class="d-flex flex-nowrap overflow-auto" style="padding-left: 0.5rem; padding-right: 0.5rem; gap: 1rem;">
       @for ($i = 0; $i < 50; $i++)
-        <div class="flex-shrink-0" style="width: 50%; max-width: 200px;">
+        <div style="width: 50%; max-width: 200px; flex-shrink: 0;">
           @include('inc.product-card')
         </div>
       @endfor
@@ -86,7 +86,7 @@
     <hr class="mb-4">
     <div class="d-flex flex-nowrap overflow-auto" style="padding-left: 0.5rem; padding-right: 0.5rem; gap: 1rem;">
       @for ($i = 0; $i < 50; $i++)
-        <div class="flex-shrink-0" style="width: 50%; max-width: 200px;">
+        <div style="width: 50%; max-width: 200px; flex-shrink: 0;">
           @include('inc.product-card')
         </div>
       @endfor

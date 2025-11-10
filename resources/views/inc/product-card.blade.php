@@ -6,7 +6,7 @@
         class="img-fluid rounded"
         style="object-fit: cover; width: 100%; aspect-ratio: 1/1;">
     </div>
-    <div class="flex-grow-1 w-100 text-start">
+    <div class="w-100 text-start" style="flex-grow: 1">
       <h6 class="fw-bold mb-1 text-dark fs-7">
         Patrik Rakovický, oblek pánsky, modrý
       </h6>

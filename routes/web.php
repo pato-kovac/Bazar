@@ -14,10 +14,11 @@ Route::get('/prihlasenie', function () {
 
 Route::post('/prihlasenie', [LoginController::class, 'authenticate'])->name('login.auth');
 
-
 Route::get('/registracia', function () {
     return view('register');
 })->name('register');
+
+Route::post('/registracia', [RegisterController::class, 'store'])->name('register.store');
 
 Route::get('/kosik', function () {
     return view('cart');

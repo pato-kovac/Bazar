@@ -45,6 +45,11 @@
   </div>
 
   <div class="mb-3">
+    <label for="location" class="form-label fw-semibold">hitla</label>
+    <input type="text" id="location" name="location" class="form-control rounded-3" placeholder="Veľké Úľany" required>
+  </div>
+
+  <div class="mb-3">
     <label for="password" class="form-label fw-semibold">Heslo</label>
     <input type="password" id="password" name="password" class="form-control rounded-3" required>
   </div>

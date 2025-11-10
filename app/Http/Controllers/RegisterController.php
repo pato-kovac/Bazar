@@ -16,6 +16,7 @@ public function store(Request $request)
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
+            'location' => $request->location,
             'password' => Hash::make($request->password),
             'register_date' => now()->toDateString(),
         ]);

@@ -18,3 +18,7 @@ Route::post('/prihlasenie', [LoginController::class, 'authenticate'])->name('log
 Route::get('/registracia', function () {
     return view('register');
 })->name('register');
+
+Route::get('/kosik', function () {
+    return view('cart');
+})->name('cart');

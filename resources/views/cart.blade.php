@@ -36,7 +36,7 @@
             <!-- Example product row -->
             <tr>
               <td class="d-flex align-items-center gap-3">
-                <img src="{{ asset('img/sample-product.jpg') }}" alt="Produkt" class="img-thumbnail" style="width: 60px; height: 60px; object-fit: cover;">
+                <img src="{{ asset('img/Product-placeholder.png') }}" alt="Produkt" class="img-thumbnail" style="width: 60px; height: 60px; object-fit: cover;">
                 <span>Produkt 1</span>
               </td>
               <td class="text-center">

@@ -165,8 +165,8 @@
     <p style="padding-bottom: 20px;  ">
         © Bajos.sk, s. r. o. 2025
     </p>
-    <p style="padding-bottom: 10px;">Osobám mladším ako 18 rokov nepredávame alkoholické nápoje, tabákové výrobky, výrobky, ktoré sú určené na fajčenie a neobsahujú tabak, bezdymové tabakové výrobky, elektronické cigarety a nikotínové vrecúška bez obsahu tabaku.
-        Ak nákup obsahuje takýto predmet a preberá ho neplnoletá osoba, kuriér tento predmet z nákupu odstráni.
+    <p style="padding-bottom: 10px;">Osobám mladším ako 18 rokov nepredávame alkoholické nápoje, tabákové výrobky, výrobky, ktoré sú určené na fajčenie a neobsahujú tabak, bezdymové tabakové výrobky, elektronické cigarety a nikotínové vrecúška bez obsahu tabaku.
+        Ak nákup obsahuje takýto predmet a preberá ho neplnoletá osoba, kuriér tento predmet z nákupu odstráni.
     </p>
     <p>Podľa zákona o evidencii tržieb je predávajúci povinný vydať kupujúcemu účtenku.
             Predávajúci je tiež povinný zaevidovať prijatú tržbu u správcu dane on-line; v prípade technickej poruchy najneskôr do 48 hodín.

@@ -45,7 +45,7 @@
     <div class="collapse navbar-collapse" id="navbarContent">
       <div class="d-flex flex-column flex-lg-row w-100 align-items-lg-center justify-content-lg-between mt-2 mt-lg-0">
 
-        <div class="flex-grow-1 me-lg-3 mb-2 mb-lg-0">
+        <div class="grow me-lg-3 mb-2 mb-lg-0">
           <div class="input-group search-bar">
             <input type="text" class="form-control" placeholder="Hľadajte produkt, kategóriu alebo značku">
             <button class="btn btn-primary">

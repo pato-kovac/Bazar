@@ -63,11 +63,15 @@
     </div>
     <hr class="mb-4">
     <div class="d-flex flex-nowrap overflow-auto" style="padding-left: 0.5rem; padding-right: 0.5rem; gap: 1rem;">
-      @for ($i = 0; $i < 50; $i++)
-        <div style="width: 50%; max-width: 200px; flex-shrink: 0;">
-          @include('inc.product-card')
-        </div>
-      @endfor
+      <div class="d-flex flex-wrap gap-3">
+        @forelse ($products as $product)
+          <div style="width: 200px;">
+            @include('inc.product-card', ['product' => $product])
+          </div>
+        @empty
+          <p>Žiadne produkty zatiaľ neboli pridané.</p>
+        @endforelse
+      </div>
     </div>
   </section>
 
@@ -87,7 +91,7 @@
     <div class="d-flex flex-nowrap overflow-auto" style="padding-left: 0.5rem; padding-right: 0.5rem; gap: 1rem;">
       @for ($i = 0; $i < 50; $i++)
         <div style="width: 50%; max-width: 200px; flex-shrink: 0;">
-          @include('inc.product-card')
+          
         </div>
       @endfor
     </div>

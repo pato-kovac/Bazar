@@ -55,10 +55,14 @@
           <h4 class="text-danger mb-3">{{ $product->product_price }} €</h4>
           <p>{{ $product->product_description }}</p>
 
-          <div class="mt-4">
-            <p><strong>Kontakt:</strong> {{ $product->publisher_email }}</p>
-            <button class="btn btn-primary w-100">Kontaktovať predajcu</button>
-          </div>
+<form action="{{ route('cart.add') }}" method="POST">
+    @csrf
+    <input type="hidden" name="product_id" value="{{ $product->id }}">
+    <button type="submit" class="btn btn-primary">
+        <i class="bi bi-envelope"></i> Kontaktovať predajcu
+    </button>
+</form>
+
         </div>
 
       </div>

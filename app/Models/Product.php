@@ -13,7 +13,7 @@ class Product extends Model
         'product_images',
         'product_description',
         'product_price',
-        'publisher_email',
+        'publisher_id',
         'created_at'
     ];
     public $timestamps = false;

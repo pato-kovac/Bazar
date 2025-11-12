@@ -32,8 +32,8 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Email vydavateľa</label>
-        <input type="email" name="publisher_email" class="form-control" required>
+        <label class="form-label">Id vydavateľa</label>
+        <input type="num" name="publisher_id" class="form-control" required>
       </div>
 
       <div class="mb-3">

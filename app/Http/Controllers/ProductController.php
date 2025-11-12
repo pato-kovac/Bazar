@@ -26,7 +26,7 @@ class ProductController extends Controller
             'product_images.*' => 'required|image|max:2048',
             'product_description' => 'required|string|max:1500',
             'product_price' => 'required|string|max:10',
-            'publisher_email' => 'required|email',
+            'publisher_id' => 'required|integer',
         ]);
 
         $imagePaths = [];
@@ -43,7 +43,7 @@ class ProductController extends Controller
             'product_images' => json_encode($imagePaths),
             'product_description' => $request->product_description,
             'product_price' => $request->product_price,
-            'publisher_email' => $request->publisher_email,
+            'publisher_id' => $request->publisher_id,
             'created_at' => now()
         ]);
 

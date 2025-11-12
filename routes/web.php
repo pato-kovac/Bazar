@@ -17,3 +17,4 @@ Route::get('/kosik', fn() => view('cart'))->name('cart');
 
 Route::get('/produkty/pridat', [ProductController::class, 'create'])->name('products.create');
 Route::post('/produkty', [ProductController::class, 'store'])->name('products.store');
+Route::get('/produkty/{id}', [ProductController::class, 'show'])->name('products.show');
